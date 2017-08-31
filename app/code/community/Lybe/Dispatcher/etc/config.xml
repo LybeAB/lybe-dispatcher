@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <lybe_dispatcher>
+                <class>Lybe_Dispatcher_Model</class>
+            </lybe_dispatcher>
+        </models>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <lybe_dispatcher>
+                        <class>lybe_dispatcher/observer</class>
+                        <method>hookToControllerActionPreDispatch</method>
+                    </lybe_dispatcher>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+</config>
